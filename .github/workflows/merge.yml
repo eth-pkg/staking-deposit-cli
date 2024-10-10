@@ -1,0 +1,27 @@
+name: Merge
+
+on:
+  push:
+    branches:
+      - feat/**
+
+jobs:
+  merge:
+    runs-on: ubuntu-20.04
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Checkout code
+        run:|
+          pip3 install virtualenv
+          virtualenv venv
+          source venv/bin/activate
+          python3 setup.py install
+          pip3 install -r requirements.txt
+          export PYTHONHASHSEED=42
+          pyenv global 3.10.2;
+          pyinstaller --distpath staking_deposit-cli-linux-arm64 ./build_configs/linux/build.spec;
+
