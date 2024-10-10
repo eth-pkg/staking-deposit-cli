@@ -23,7 +23,9 @@ jobs:
           export PYTHONHASHSEED=42
           pip3 install -r ./build_configs/linux/requirements.txt
           pyinstaller --distpath staking_deposit-cli-linux-arm64 ./build_configs/linux/build.spec;
-          staking_deposit-cli-linux-arm64/deposit
+          ls -al staking_deposit-cli-linux-arm64
+          echo "${HOME}/staking_deposit-cli-linux-arm64/deposit" >> $GITHUB_PATH
+
       - name: Save staking-deposit-cli
         uses: actions/upload-artifact@v4
         env:
