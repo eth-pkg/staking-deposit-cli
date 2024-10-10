@@ -132,6 +132,8 @@ def generate_keys(ctx: click.Context, validator_start_index: int,
     chain_setting = get_chain_setting(chain)
     if devnet_chain_setting is not None:
         click.echo('\n%s\n' % '**[Warning] Using devnet chain setting to generate the keys.**\t')
+        with open(devnet_chain_setting, 'r') as file:
+            devnet_chain_setting = file.read()
         devnet_chain_setting_dict = json.loads(devnet_chain_setting)
         chain_setting = get_devnet_chain_setting(
             network_name=devnet_chain_setting_dict['network_name'],
