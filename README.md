@@ -2,6 +2,8 @@
 
 [![GitPOAP Badge](https://public-api.gitpoap.io/v1/repo/ethereum/staking-deposit-cli/badge)](https://www.gitpoap.io/gh/ethereum/staking-deposit-cli)
 
+NOTE: THIS IS A FORK, only intended to for generating keys for testnet. PLEASE use the OFFICIAL staking deposit cli for mainnet.
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
