@@ -20,6 +20,6 @@ jobs:
           virtualenv venv
           source venv/bin/activate
           python3 setup.py install
-          pip3 install -r requirements.txt
           export PYTHONHASHSEED=42
+          pip3 install -r ./build_configs/linux/requirements.txt
           pyinstaller --distpath staking_deposit-cli-linux-arm64 ./build_configs/linux/build.spec;
