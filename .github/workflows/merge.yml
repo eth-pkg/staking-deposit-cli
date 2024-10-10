@@ -22,5 +22,4 @@ jobs:
           python3 setup.py install
           pip3 install -r requirements.txt
           export PYTHONHASHSEED=42
-          pyenv global 3.10.2;
           pyinstaller --distpath staking_deposit-cli-linux-arm64 ./build_configs/linux/build.spec;
